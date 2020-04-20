@@ -9,9 +9,7 @@ router.post('/signup', async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = new User({ email, password });
-    console.log('before save');
     await user.save();
-    console.log('out of save');
 
     const token = jwt.sign({ userId: user._id }, 'MY_SECRET_KEY_jdhsgfakjhgeyg');
 

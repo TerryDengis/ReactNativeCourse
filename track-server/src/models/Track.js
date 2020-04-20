@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
 
 const pointSchema = new mongoose.Schema({
   timestamp: Number,
@@ -12,6 +11,7 @@ const pointSchema = new mongoose.Schema({
     speed: Number,
   },
 });
+
 const trackSchema = new mongoose.Schema({
   userId: {
     type: mongoose.Schema.Types.ObjectId,
