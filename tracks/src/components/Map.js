@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
-import { StyleSheet, ActivityIndicator } from 'react-native';
+import { StyleSheet, ActivityIndicator, Dimensions } from 'react-native';
 import MapView, { Polyline, Circle } from 'react-native-maps';
-import { Dimensions } from 'react-native';
 
 import { Context as LocationContext } from '../context/LocationContext';
 
@@ -44,7 +43,7 @@ export default Map;
 
 const styles = StyleSheet.create({
   map: {
-    height: windowHeight * 0.65,
+    height: windowHeight * 0.6,
   },
   ActivityIndicator: {
     marginTop: 200,
