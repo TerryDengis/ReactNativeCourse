@@ -22,16 +22,16 @@ const TrackDetailScreen = ({ navigation }) => {
           ...initialCoords,
         }}
       >
-        <Polyline coordinates={track.locations.map((loc) => loc.coords)} />
+        <Polyline strokeWidth={5} coordinates={track.locations.map((loc) => loc.coords)} />
       </MapView>
     </>
   );
 };
-
-export default TrackDetailScreen;
 
 const styles = StyleSheet.create({
   map: {
     height: windowHeight * 0.75,
   },
 });
+
+export default TrackDetailScreen;
